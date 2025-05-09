@@ -29,7 +29,7 @@ export default function blogDetail({ params }: { params: { id: string } }) {
       <div className="flex justify-center space-x-4">
         <Link
           href={blog.link}
-          className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-500 transition-colors"
+          className="inline-block px-6 py-3 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition-colors"
         >
           Read Full Article
         </Link>
