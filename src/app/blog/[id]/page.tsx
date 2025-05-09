@@ -30,7 +30,7 @@ export default function blogDetail({ params }: { params: { id: string } }) {
         <div className="flex justify-center">
           <a
             href={`/`}
-            className="inline-block px-6 py-2 bg-yellow-500 text-white font-semibold rounded-lg shadow-lg hover:bg-yellow-600 transition-colors"
+            className="inline-block px-6 py-2 bg-black text-white font-semibold rounded-lg shadow-lg hover:bg-gray-600 transition-colors"
           >
             Read full Article
           </a>

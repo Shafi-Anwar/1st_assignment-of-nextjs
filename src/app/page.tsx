@@ -19,14 +19,14 @@ export default function SimpleLayout() {
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-transparent to-transparent opacity-50 group-hover:opacity-70 transition-opacity"></div>
                 </div>
                 <div className="p-6 space-y-4">
-                  <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-yellow-500 transition-colors">
+                  <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-blue-500 transition-colors">
                     {blog.title}
                   </h3>
                   <p className="text-md text-gray-700">{blog.content}</p>
                 </div>
                 <div className="p-4 bg-gray-50">
                   <p className="text-sm font-medium text-gray-600">
-                    Learn More
+                    Go to see view
                   </p>
                 </div>
               </div>
