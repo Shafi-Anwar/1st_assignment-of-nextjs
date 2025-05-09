@@ -32,7 +32,7 @@ export default function blogDetail({ params }: { params: { id: string } }) {
             href={`/`}
             className="inline-block px-6 py-2 bg-black text-white font-semibold rounded-lg shadow-lg hover:bg-gray-600 transition-colors"
           >
-            Read full Article
+            Back to Home
           </a>
         </div>
       </div>
