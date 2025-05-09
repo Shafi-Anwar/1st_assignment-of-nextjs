@@ -1,5 +1,6 @@
 import React from "react";
-import blogData from "../data/blog.json"; // Importing the blog data
+import { blogData } from "@/data/data";
+
 import Link from "next/link";
 
 export default function SimpleLayout() {

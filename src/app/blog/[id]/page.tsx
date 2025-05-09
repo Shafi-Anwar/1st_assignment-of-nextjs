@@ -1,18 +1,19 @@
-import blogData from "@/data/blog.json";
+import { blogData } from "@/data/data";
 import { Course } from "@/types/data";
+import Link from "next/link";
 
 export default function blogDetail({ params }: { params: { id: string } }) {
   const blog = blogData.find((b: Course) => b.id === parseInt(params.id));
   if (!blog)
     return (
       <div className="p-6 text-center text-lg text-gray-500">
-        blog not found.
+        Blog not found.
       </div>
     );
 
   return (
-    <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-2xl space-y-6">
-      <h1 className="text-4xl font-bold text-gray-900 text-center hover:text-gray-500 transition-colors cursor-pointer">
+    <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-2xl space-y-8">
+      <h1 className="text-4xl font-bold text-gray-900 text-center hover:text-gray-600 transition-colors cursor-pointer">
         {blog.title}
       </h1>
 
@@ -24,17 +25,21 @@ export default function blogDetail({ params }: { params: { id: string } }) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black opacity-40 rounded-lg"></div>
       </div>
+      <h1 className="text-xl text-center font-bold">{blog.content}</h1>
+      <div className="flex justify-center space-x-4">
+        <Link
+          href={blog.link}
+          className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-500 transition-colors"
+        >
+          Read Full Article
+        </Link>
 
-      <div className="space-y-4">
-        <p className="text-lg text-gray-700">{blog.content}</p>
-        <div className="flex justify-center">
-          <a
-            href={`/`}
-            className="inline-block px-6 py-2 bg-black text-white font-semibold rounded-lg shadow-lg hover:bg-gray-600 transition-colors"
-          >
-            Back to Home
-          </a>
-        </div>
+        <Link
+          href={`/`}
+          className="inline-block px-6 py-2 bg-black text-white font-semibold rounded-lg shadow-lg hover:bg-gray-600 transition-colors"
+        >
+          Back to Home
+        </Link>
       </div>
     </div>
   );
