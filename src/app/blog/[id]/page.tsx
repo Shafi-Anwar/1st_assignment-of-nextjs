@@ -1,9 +1,9 @@
 import { blogData } from "@/data/data";
-import { Course } from "@/types/data";
+import { Blog } from "@/types/data";
 import Link from "next/link";
 
 export default function blogDetail({ params }: { params: { id: string } }) {
-  const blog = blogData.find((b: Course) => b.id === parseInt(params.id));
+  const blog = blogData.find((b: Blog) => b.id === parseInt(params.id));
   if (!blog)
     return (
       <div className="p-6 text-center text-lg text-gray-500">
